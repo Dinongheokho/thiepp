@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thiệp 20/10 cho cậu</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffe6f0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      width: 400px;
+      height: 250px;
+      perspective: 1000px;
+    }
+
+    .inner-card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover .inner-card {
+      transform: rotateY(180deg);
+    }
+
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      padding: 20px;
+    }
+
+    .front {
+      background: #ff99cc;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .front h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .front p {
+      font-size: 18px;
+    }
+
+    .back {
+      background: white;
+      color: #d6336c;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .back h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .back p {
+      font-size: 16px;
+      text-align: center;
+      max-width: 90%;
+    }
+
+    .heart {
+      font-size: 30px;
+      margin-top: 10px;
+      animation: heartbeat 1s infinite;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="inner-card">
+      <div class="front">
+        <h1>Chúc mừng 20/10!</h1>
+        <p>Gửi đến cậu – người con gái tuyệt vời 💖</p>
+      </div>
+      <div class="back">
+        <h2>Gửi cậu</h2>
+        <p>
+          Chúc cậu luôn xinh đẹp, hạnh phúc và rạng rỡ như đóa hoa.<br>
+         và luôn thành công trên con đường mình đã chọn.
+        </p>
+        <div class="heart">💗</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
